@@ -9,7 +9,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.1.1] - 2023-08-08
 
+- Fix build for `default-apps-eks`.
+
 ## [0.1.0] - 2023-08-08
+
+- Add `default-apps-eks` files.
 
 [Unreleased]: https://github.com/giantswarm/default-apps-eks/compare/v0.1.1...HEAD
 [0.1.1]: https://github.com/giantswarm/default-apps-eks/compare/v0.1.0...v0.1.1
