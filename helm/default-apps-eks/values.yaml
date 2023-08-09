@@ -1,5 +1,6 @@
 clusterName: ""
 organization: ""
+awsAccoundID: "242036376510"
 
 userConfig:
   certManager:
@@ -27,7 +28,7 @@ userConfig:
           batchChangeInterval: null
         serviceAccount:
           annotations:
-            eks.amazonaws.com/role-arn: {{ .Values.clusterName }}-Route53Manager-Role
+            eks.amazonaws.com/role-arn: arn:aws:iam::{{ .Values.awsAccoundID }}:role/{{ .Values.clusterName }}-Route53Manager-Role
         domainFilters:
           - {{ .Values.baseDomain }}
         txtOwnerId: giantswarm-io-external-dns
@@ -94,7 +95,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/external-dns-app
-    version: 2.38.0
+    version: 2.38.1
   metricsServer:
     appName: metrics-server
     chartName: metrics-server-app
