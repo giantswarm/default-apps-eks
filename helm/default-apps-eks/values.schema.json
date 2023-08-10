@@ -5,40 +5,6 @@
         "apps": {
             "type": "object",
             "properties": {
-                "aws-pod-identity-webhook": {
-                    "type": "object",
-                    "properties": {
-                        "appName": {
-                            "type": "string"
-                        },
-                        "catalog": {
-                            "type": "string"
-                        },
-                        "chartName": {
-                            "type": "string"
-                        },
-                        "clusterValues": {
-                            "type": "object",
-                            "properties": {
-                                "configMap": {
-                                    "type": "boolean"
-                                },
-                                "secret": {
-                                    "type": "boolean"
-                                }
-                            }
-                        },
-                        "forceUpgrade": {
-                            "type": "boolean"
-                        },
-                        "namespace": {
-                            "type": "string"
-                        },
-                        "version": {
-                            "type": "string"
-                        }
-                    }
-                },
                 "capi-node-labeler": {
                     "type": "object",
                     "properties": {
@@ -108,40 +74,6 @@
                     }
                 },
                 "certManager": {
-                    "type": "object",
-                    "properties": {
-                        "appName": {
-                            "type": "string"
-                        },
-                        "catalog": {
-                            "type": "string"
-                        },
-                        "chartName": {
-                            "type": "string"
-                        },
-                        "clusterValues": {
-                            "type": "object",
-                            "properties": {
-                                "configMap": {
-                                    "type": "boolean"
-                                },
-                                "secret": {
-                                    "type": "boolean"
-                                }
-                            }
-                        },
-                        "forceUpgrade": {
-                            "type": "boolean"
-                        },
-                        "namespace": {
-                            "type": "string"
-                        },
-                        "version": {
-                            "type": "string"
-                        }
-                    }
-                },
-                "etcdKubernetesResourceCountExporter": {
                     "type": "object",
                     "properties": {
                         "appName": {
