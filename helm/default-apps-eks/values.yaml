@@ -162,4 +162,4 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/observability-bundle
-    version: 0.7.2
+    version: 0.8.2
