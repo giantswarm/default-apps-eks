@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Bump `observability-bundle` app to 0.8.2.
+- Bump `vertical-pod-autoscaler` app to 4.0.0.
+
 ## [0.1.2] - 2023-08-09
 
 - Bump `external-dns` app.
