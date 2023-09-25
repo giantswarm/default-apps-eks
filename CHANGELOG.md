@@ -16,6 +16,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Bump `observability-bundle` app to 0.8.4.
 - Bump `vertical-pod-autoscaler` app to 4.0.0.
 
+### Fixed
+
+- Enable cilium network policies for:
+  - cert-manager
+  - observability-bundle
+
 ## [0.1.2] - 2023-08-09
 
 - Bump `external-dns` app.
