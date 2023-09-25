@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Bump `external-dns` app to 2.39.0.
 - Bump `net-exporter` app to 1.17.1.
 - Bump `node-exporter-app` app to 1.17.1.
-- Bump `observability-bundle` app to 0.8.2.
+- Bump `observability-bundle` app to 0.8.4.
 - Bump `vertical-pod-autoscaler` app to 4.0.0.
 
 ## [0.1.2] - 2023-08-09
