@@ -28,6 +28,9 @@
                                 }
                             }
                         },
+                        "enabled": {
+                            "type": "boolean"
+                        },
                         "forceUpgrade": {
                             "type": "boolean"
                         },
@@ -61,6 +64,12 @@
                                     "type": "boolean"
                                 }
                             }
+                        },
+                        "dependsOn": {
+                            "type": "string"
+                        },
+                        "enabled": {
+                            "type": "boolean"
                         },
                         "forceUpgrade": {
                             "type": "boolean"
@@ -96,7 +105,47 @@
                                 }
                             }
                         },
+                        "enabled": {
+                            "type": "boolean"
+                        },
                         "forceUpgrade": {
+                            "type": "boolean"
+                        },
+                        "namespace": {
+                            "type": "string"
+                        },
+                        "version": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "chartOperatorExtensions": {
+                    "type": "object",
+                    "properties": {
+                        "appName": {
+                            "type": "string"
+                        },
+                        "catalog": {
+                            "type": "string"
+                        },
+                        "chartName": {
+                            "type": "string"
+                        },
+                        "clusterValues": {
+                            "type": "object",
+                            "properties": {
+                                "configMap": {
+                                    "type": "boolean"
+                                },
+                                "secret": {
+                                    "type": "boolean"
+                                }
+                            }
+                        },
+                        "dependsOn": {
+                            "type": "string"
+                        },
+                        "enabled": {
                             "type": "boolean"
                         },
                         "namespace": {
@@ -129,6 +178,9 @@
                                     "type": "boolean"
                                 }
                             }
+                        },
+                        "enabled": {
+                            "type": "boolean"
                         },
                         "forceUpgrade": {
                             "type": "boolean"
@@ -164,6 +216,9 @@
                                 }
                             }
                         },
+                        "enabled": {
+                            "type": "boolean"
+                        },
                         "forceUpgrade": {
                             "type": "boolean"
                         },
@@ -197,6 +252,12 @@
                                     "type": "boolean"
                                 }
                             }
+                        },
+                        "dependsOn": {
+                            "type": "string"
+                        },
+                        "enabled": {
+                            "type": "boolean"
                         },
                         "forceUpgrade": {
                             "type": "boolean"
@@ -232,6 +293,9 @@
                                 }
                             }
                         },
+                        "enabled": {
+                            "type": "boolean"
+                        },
                         "forceUpgrade": {
                             "type": "boolean"
                         },
@@ -265,6 +329,9 @@
                                     "type": "boolean"
                                 }
                             }
+                        },
+                        "enabled": {
+                            "type": "boolean"
                         },
                         "forceUpgrade": {
                             "type": "boolean"
@@ -306,6 +373,9 @@
                         "dependsOn": {
                             "type": "string"
                         },
+                        "enabled": {
+                            "type": "boolean"
+                        },
                         "forceUpgrade": {
                             "type": "boolean"
                         },
@@ -319,6 +389,9 @@
                 }
             }
         },
+        "awsAccoundID": {
+            "type": "string"
+        },
         "clusterName": {
             "type": "string"
         },
@@ -329,19 +402,6 @@
             "type": "object",
             "properties": {
                 "certManager": {
-                    "type": "object",
-                    "properties": {
-                        "configMap": {
-                            "type": "object",
-                            "properties": {
-                                "values": {
-                                    "type": "string"
-                                }
-                            }
-                        }
-                    }
-                },
-                "etcdKubernetesResourceCountExporter": {
                     "type": "object",
                     "properties": {
                         "configMap": {
@@ -368,6 +428,19 @@
                     }
                 },
                 "netExporter": {
+                    "type": "object",
+                    "properties": {
+                        "configMap": {
+                            "type": "object",
+                            "properties": {
+                                "values": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                },
+                "observabilityBundle": {
                     "type": "object",
                     "properties": {
                         "configMap": {
