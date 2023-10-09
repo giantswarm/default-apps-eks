@@ -17,7 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Bump `cert-exporter` app to 2.7.0.
 - Bump `external-dns` app to 2.40.0.
 - Bump `metrics-server` app to 2.3.0.
-- Bump `net-exporter` app to 1.17.1.
+- Bump `net-exporter` app to 1.18.0.
 - Bump `node-exporter-app` app to 1.17.1.
 - Bump `observability-bundle` app to 0.8.7.
 - Bump `vertical-pod-autoscaler` app to 4.2.0.
