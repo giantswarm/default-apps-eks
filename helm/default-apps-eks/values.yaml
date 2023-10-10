@@ -40,6 +40,12 @@ userConfig:
           - service
         extraArgs:
           - "--aws-batch-change-interval=10s"
+  metricsServer:
+    configMap:
+      values: |
+        ciliumNetworkPolicy:
+          enabled: true
+        hostNetwork: true
   netExporter:
     configMap:
       values: |
@@ -129,7 +135,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/metrics-server-app
-    version: 2.3.0
+    version: 2.4.0
   netExporter:
     appName: net-exporter
     chartName: net-exporter
