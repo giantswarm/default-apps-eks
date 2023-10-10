@@ -30,7 +30,7 @@ userConfig:
           batchChangeInterval: null
         serviceAccount:
           annotations:
-            eks.amazonaws.com/role-arn: arn:aws:iam::{{ .Values.awsAccoundID }}:role/{{ .Values.clusterName }}-Route53Manager-Role
+            eks.amazonaws.com/role-arn: arn:aws:iam::{{ include "aws-account-id" $ }}:role/{{ .Values.clusterName }}-Route53Manager-Role
         domainFilters:
           - {{ .Values.baseDomain }}
         txtOwnerId: giantswarm-io-external-dns
