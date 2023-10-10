@@ -427,6 +427,19 @@
                         }
                     }
                 },
+                "metricsServer": {
+                    "type": "object",
+                    "properties": {
+                        "configMap": {
+                            "type": "object",
+                            "properties": {
+                                "values": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                },
                 "netExporter": {
                     "type": "object",
                     "properties": {

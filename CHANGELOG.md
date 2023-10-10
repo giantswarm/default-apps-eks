@@ -16,7 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Bump `cert-manager-app` app to 3.4.0.
 - Bump `cert-exporter` app to 2.7.0.
 - Bump `external-dns` app to 2.42.0.
-- Bump `metrics-server` app to 2.3.0.
+- Bump `metrics-server` app to 2.4.0.
 - Bump `net-exporter` app to 1.18.0.
 - Bump `node-exporter-app` app to 1.17.1.
 - Bump `observability-bundle` app to 0.8.7.
@@ -27,6 +27,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Enable cilium network policies for:
   - cert-manager
   - observability-bundle
+- Fix metrics-server by setting `hostNetwork: true`
 
 ## [0.1.2] - 2023-08-09
 
