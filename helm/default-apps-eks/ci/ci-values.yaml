@@ -2,4 +2,3 @@ clusterName: test
 providerSpecific:
   awsAccountId: "1234567890"
   awsClusterRoleIdentityName: "default"
-
