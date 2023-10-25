@@ -1,6 +1,5 @@
 clusterName: ""
 organization: ""
-awsAccoundID: "242036376510"
 
 userConfig:
   certManager:
@@ -190,3 +189,7 @@ apps:
     # used by renovate
     # repo: giantswarm/observability-bundle
     version: 0.8.9
+
+providerSpecific:
+  awsAccountId: ""
+  awsClusterRoleIdentityName: ""
