@@ -45,7 +45,6 @@ userConfig:
       values: |
         ciliumNetworkPolicy:
           enabled: true
-        hostNetwork: true
   netExporter:
     configMap:
       values: |
