@@ -45,7 +45,6 @@ userConfig:
       values: |
         ciliumNetworkPolicy:
           enabled: true
-        hostNetwork: true
   netExporter:
     configMap:
       values: |
@@ -83,7 +82,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/cert-exporter
-    version: 2.7.0
+    version: 2.8.2
   certManager:
     appName: cert-manager
     chartName: cert-manager-app
@@ -135,7 +134,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/metrics-server-app
-    version: 2.4.0
+    version: 2.4.1
   netExporter:
     appName: net-exporter
     chartName: net-exporter
@@ -162,7 +161,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/node-exporter-app
-    version: 1.17.1
+    version: 1.18.1
   vpa:
     appName: vertical-pod-autoscaler
     chartName: vertical-pod-autoscaler-app
@@ -190,4 +189,4 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/observability-bundle
-    version: 0.8.7
+    version: 0.8.9
