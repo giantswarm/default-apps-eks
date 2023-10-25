@@ -13,7 +13,7 @@ Output: The AWS account ID
 
 {{- define "getAWSClusterRoleName" -}}
 {{- $roleName := .Values.providerSpecific.awsClusterRoleIdentityName -}}
-{{- $awsManagedControlPlane :=  (lookup "controlplane.cluster.x-k8s.io/v1beta2" "AWSManagedControlPlane" $.Release.Namespace $.Values.clusterName -}}
+{{- $awsManagedControlPlane :=  (lookup "controlplane.cluster.x-k8s.io/v1beta2" "AWSManagedControlPlane" $.Release.Namespace $.Values.clusterName) -}}
 {{- if $awsManagedControlPlane -}}
 {{- $roleName = $awsManagedControlPlane.spec.identityRef.name -}}
 {{- end -}}
