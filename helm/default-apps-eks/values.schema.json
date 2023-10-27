@@ -398,6 +398,27 @@
         "organization": {
             "type": "string"
         },
+        "providerSpecific": {
+            "type": "object",
+            "title": "AWS settings",
+            "properties": {
+                "awsAccountId": {
+                    "type": "string",
+                    "title": "AWS account ID",
+                    "description": "AWS Account ID of the AWSClusterRoleIdentity IAM role, recommendation is to leave this value empty as it will be automatically calculated. This value is needed for tests.",
+                    "default": "",
+                    "maxLength": 12,
+                    "minLength": 0,
+                    "pattern": "^[0-9]{0,12}$"
+                },
+                "awsClusterRoleIdentityName": {
+                    "type": "string",
+                    "title": "Cluster role identity name",
+                    "description": "Name of an AWSClusterRoleIdentity object. Recommendation is to leave this value empty as it will be automatically calculated.",
+		    "default": ""
+                }
+            }
+        },
         "userConfig": {
             "type": "object",
             "properties": {

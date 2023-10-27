@@ -1,6 +1,5 @@
 clusterName: ""
 organization: ""
-awsAccoundID: "242036376510"
 
 userConfig:
   certManager:
@@ -30,7 +29,7 @@ userConfig:
           batchChangeInterval: null
         serviceAccount:
           annotations:
-            eks.amazonaws.com/role-arn: arn:aws:iam::{{ .Values.awsAccoundID }}:role/{{ .Values.clusterName }}-Route53Manager-Role
+            eks.amazonaws.com/role-arn: arn:aws:iam::{{ include "aws-account-id" $ }}:role/{{ .Values.clusterName }}-Route53Manager-Role
         domainFilters:
           - {{ .Values.baseDomain }}
         txtOwnerId: giantswarm-io-external-dns
@@ -190,3 +189,7 @@ apps:
     # used by renovate
     # repo: giantswarm/observability-bundle
     version: 0.8.9
+
+providerSpecific:
+  awsAccountId: ""
+  awsClusterRoleIdentityName: ""
