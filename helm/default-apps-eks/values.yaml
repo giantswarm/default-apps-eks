@@ -188,7 +188,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/observability-bundle
-    version: 0.8.9
+    version: 0.9.0
 
 providerSpecific:
   awsAccountId: ""
