@@ -94,7 +94,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/cert-manager-app
-    version: 3.5.0
+    version: 3.6.0
   chartOperatorExtensions:
     appName: chart-operator-extensions
     chartName: chart-operator-extensions
@@ -174,7 +174,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/vertical-pod-autoscaler-app
-    version: 4.2.0
+    version: 4.6.0
   observabilityBundle:
     appName: observability-bundle
     chartName: observability-bundle
@@ -188,7 +188,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/observability-bundle
-    version: 0.9.0
+    version: 0.10.1
 
 providerSpecific:
   awsAccountId: ""
