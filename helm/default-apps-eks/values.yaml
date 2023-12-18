@@ -20,6 +20,12 @@ userConfig:
         dns01RecursiveNameserversOnly: true
         ciliumNetworkPolicy:
           enabled: true
+  cluster-autoscaler:
+    configMap:
+      values: |
+        serviceAccount:
+          annotations:
+            eks.amazonaws.com/role-arn: {{ .Values.clusterName }}-cluster-autoscaler-role
   externalDns:
     configMap:
       values: |
