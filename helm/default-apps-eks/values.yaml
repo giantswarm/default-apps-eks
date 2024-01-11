@@ -25,7 +25,8 @@ userConfig:
       values: |
         node:
           # remove nodeSelector so it can run on worker nodes
-          nodeSelector: {}
+          nodeSelector:
+            node-role.kubernetes.io/worker: ""
           caBundlePath: "/etc/ssl/certs/ca-bundle.crt"
   externalDns:
     configMap:
