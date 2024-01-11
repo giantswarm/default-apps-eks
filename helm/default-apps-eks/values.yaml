@@ -26,6 +26,10 @@ userConfig:
         serviceAccount:
           annotations:
             eks.amazonaws.com/role-arn: arn:aws:iam::{{ include "aws-account-id" $ }}:role/{{ .Values.clusterName }}-cluster-autoscaler-role
+        node:
+          nodeSelector:
+            node-role.kubernetes.io/worker: ""
+          caBundlePath: "/etc/ssl/certs/ca-bundle.crt"
   externalDns:
     configMap:
       values: |
@@ -138,7 +142,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/cluster-autoscaler-app
-    version: 1.27.3-gs3
+    version: 1.27.3-gs5
   externalDns:
     appName: external-dns
     chartName: external-dns-app
