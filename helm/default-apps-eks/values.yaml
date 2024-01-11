@@ -20,6 +20,13 @@ userConfig:
         dns01RecursiveNameserversOnly: true
         ciliumNetworkPolicy:
           enabled: true
+  cluster-autoscaler:
+    configMap:
+      values: |
+        node:
+          # remove nodeSelector so it can run on worker nodes
+          nodeSelector: {}
+          caBundlePath: "/etc/ssl/certs/ca-bundle.crt"
   externalDns:
     configMap:
       values: |
