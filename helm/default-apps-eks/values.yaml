@@ -29,6 +29,7 @@ userConfig:
         node:
           nodeSelector:
             node-role.kubernetes.io/worker: ""
+            node-role.kubernetes.io/control-plane: null
           caBundlePath: "/etc/ssl/certs/ca-bundle.crt"
   externalDns:
     configMap:
