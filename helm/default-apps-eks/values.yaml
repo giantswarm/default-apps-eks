@@ -66,19 +66,6 @@ userConfig:
         ciliumNetworkPolicy:
           enabled: true
 apps:
-  aws-pod-identity-webhook:
-    appName: aws-pod-identity-webhook
-    chartName: aws-pod-identity-webhook
-    catalog: default
-    clusterValues:
-      configMap: true
-      secret: false
-    dependsOn: cert-manager  # since aws-pod-identity-webhook installs a `Certificate` object
-    enabled: true
-    namespace: kube-system
-    # used by renovate
-    # repo: giantswarm/aws-pod-identity-webhook
-    version: 1.13.2
   capi-node-labeler:
     appName: capi-node-labeler
     chartName: capi-node-labeler
