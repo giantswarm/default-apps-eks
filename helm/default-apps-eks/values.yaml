@@ -4,7 +4,7 @@ organization: ""
 userConfig:
   certManager:
     configMap:
-      values: |
+      values:
         # cert-manager-app v3.x.x
         # cert-manager's DNS01 solver by default tries to reach authoritative nameservers directly, using
         # their public IPs. Since those are not reachable from private clusters, we instead rely on the
@@ -22,7 +22,7 @@ userConfig:
           enabled: true
   cluster-autoscaler:
     configMap:
-      values: |
+      values:
         serviceAccount:
           annotations:
             eks.amazonaws.com/role-arn: arn:aws:iam::{{ include "aws-account-id" $ }}:role/{{ .Values.clusterName }}-cluster-autoscaler-role
@@ -33,7 +33,7 @@ userConfig:
           caBundlePath: "/etc/ssl/certs/ca-bundle.crt"
   externalDns:
     configMap:
-      values: |
+      values:
         provider: aws
         aws:
           irsa: "true"
@@ -42,9 +42,9 @@ userConfig:
           annotations:
             eks.amazonaws.com/role-arn: arn:aws:iam::{{ include "aws-account-id" $ }}:role/{{ .Values.clusterName }}-Route53Manager-Role
         domainFilters:
-          - {{ .Values.baseDomain }}
+          - "{{ .Values.baseDomain }}"
         txtOwnerId: giantswarm-io-external-dns
-        txtPrefix: {{ .Values.clusterName }}
+        txtPrefix: "{{ .Values.clusterName }}"
         annotationFilter: giantswarm.io/external-dns=managed
         sources:
           - service
@@ -52,17 +52,17 @@ userConfig:
           - "--aws-batch-change-interval=10s"
   metricsServer:
     configMap:
-      values: |
+      values:
         ciliumNetworkPolicy:
           enabled: true
   netExporter:
     configMap:
-      values: |
+      values:
         NetExporter:
           NTPServers: 169.254.169.123
   observabilityBundle:
     configMap:
-      values: |
+      values:
         ciliumNetworkPolicy:
           enabled: true
 apps:
