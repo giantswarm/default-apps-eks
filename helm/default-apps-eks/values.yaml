@@ -50,6 +50,8 @@ userConfig:
           - service
         extraArgs:
           - "--aws-batch-change-interval=10s"
+        ciliumNetworkPolicy:
+          enabled: true
   metricsServer:
     configMap:
       values: |
@@ -60,6 +62,8 @@ userConfig:
       values: |
         NetExporter:
           NTPServers: 169.254.169.123
+        ciliumNetworkPolicy:
+          enabled: true
   observabilityBundle:
     configMap:
       values: |
