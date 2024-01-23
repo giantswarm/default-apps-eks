@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## Changed
+
+- Add `cluster-autoscaler`.
+- Use a YAML object for the apps configuration, so that defaults are not overwritten when users pass custom values.
+
 ## [0.3.1] - 2023-10-27
 
 ## Changed
