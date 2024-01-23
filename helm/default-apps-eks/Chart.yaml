@@ -1,7 +1,7 @@
 apiVersion: v2
 name: default-apps-eks
 description: A Helm chart for default-apps-eks
-icon: https://s.giantswarm.io/app-icons/aws/1/dark.svg
+icon: https://s.giantswarm.io/app-icons/aws/2/dark.svg
 engine: gotpl
 home: https://github.com/giantswarm/default-apps-eks
 version: 0.3.1
