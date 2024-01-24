@@ -138,10 +138,11 @@ apps:
     clusterValues:
       configMap: true
       secret: false
+    enabled: true
     forceUpgrade: true
     namespace: kube-system
     # used by renovate
-    # repo: giantswarm/coredns-app
+    # repo: giantswarm/cluster-autoscaler-app
     version: 1.21.0
   externalDns:
     appName: external-dns
