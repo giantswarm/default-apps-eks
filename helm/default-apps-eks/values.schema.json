@@ -473,19 +473,6 @@
                             }
                         }
                     }
-                },
-                "observabilityBundle": {
-                    "type": "object",
-                    "properties": {
-                        "configMap": {
-                            "type": "object",
-                            "properties": {
-                                "values": {
-                                    "type": ["object", "string"]
-                                }
-                            }
-                        }
-                    }
                 }
             }
         }
