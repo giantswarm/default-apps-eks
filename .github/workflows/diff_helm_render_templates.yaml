@@ -22,7 +22,7 @@ jobs:
     if: github.event_name == 'pull_request'
     steps:
       - name: Find suspend comment
-        uses: peter-evans/find-comment@v2
+        uses: peter-evans/find-comment@v3
         continue-on-error: true
         id: fc
         with:
@@ -58,7 +58,7 @@ jobs:
            version: ${{ env.helm_ver }}
       - run: which helm
       - name: install yq
-        uses: giantswarm/install-binary-action@v1
+        uses: giantswarm/install-binary-action@v2
         with:
           binary: yq
           download_url: "https://github.com/mikefarah/yq/releases/download/v${version}/yq_linux_amd64.tar.gz"
@@ -67,7 +67,7 @@ jobs:
           version: ${{ env.yq_ver }}
       - run: which yq
       - name: install dyff
-        uses: giantswarm/install-binary-action@v1
+        uses: giantswarm/install-binary-action@v2
         with:
           binary: dyff
           download_url: "https://github.com/homeport/dyff/releases/download/v${version}/dyff_${version}_linux_amd64.tar.gz"
@@ -100,7 +100,7 @@ jobs:
           run: |
             dyff between -s -i -b -g /tmp/${{ matrix.values }}/render-old.yaml /tmp/${{ matrix.values }}/render-new.yaml && echo "No diff detected" || if [[ $? -eq 255 ]]; then echo "Diff error"; fi;
       - name: Find diff comment
-        uses: peter-evans/find-comment@v2
+        uses: peter-evans/find-comment@v3
         continue-on-error: true
         id: fc
         if: ${{ !contains(steps.diff.outputs.stdout,'No diff detected') }}
@@ -117,7 +117,7 @@ jobs:
           comment_id: ${{ steps.fc.outputs.comment-id }}
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Create or update validation comment
-        uses: peter-evans/create-or-update-comment@v3
+        uses: peter-evans/create-or-update-comment@v4
         if: ${{ !contains(steps.diff.outputs.stdout,'No diff detected') }}
         with:
           issue-number: ${{ github.event.pull_request.number }}
