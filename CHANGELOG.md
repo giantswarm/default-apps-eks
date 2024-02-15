@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Added
 
-- Inluded `teleport-kube-agent` by default on EKS clusters.
+- Included `teleport-kube-agent` app by default on EKS clusters.
 
 ## [0.5.1] - 2024-02-13
 
