@@ -227,7 +227,6 @@ apps:
       - kind: configMap
         name: "{{ $.Values.clusterName }}-teleport-kube-agent-config"
         namespace: "{{ $.Release.Namespace }}"
-    version: 1.2.1
 providerSpecific:
   awsAccountId: ""
   awsClusterRoleIdentityName: ""
