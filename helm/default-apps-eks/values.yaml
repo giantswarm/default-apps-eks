@@ -225,6 +225,7 @@ apps:
     # https://github.com/giantswarm/rfc/tree/main/multi-layer-app-config#example
     extraConfigs:
       - kind: configMap
+        # Created by teleport-operator
         name: "{{ $.Values.clusterName }}-teleport-kube-agent-config"
         namespace: "{{ $.Release.Namespace }}"
 providerSpecific:
