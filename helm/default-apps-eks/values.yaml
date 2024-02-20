@@ -207,7 +207,27 @@ apps:
     # used by renovate
     # repo: giantswarm/observability-bundle
     version: 1.2.1
-
+  teleport-kube-agent:
+    appName: teleport-kube-agent
+    chartName: teleport-kube-agent
+    catalog: default
+    clusterValues:
+      configMap: true
+      secret: true
+    enabled: true
+    forceUpgrade: true
+    namespace: kube-system
+    # used by renovate
+    # repo: giantswarm/teleport-kube-agent-app
+    version: 0.7.1
+    # a list of extraConfigs for the App,
+    # It can be secret or configmap
+    # https://github.com/giantswarm/rfc/tree/main/multi-layer-app-config#example
+    extraConfigs:
+      - kind: configMap
+        # Created by teleport-operator
+        name: "{{ $.Values.clusterName }}-teleport-kube-agent-config"
+        namespace: "{{ $.Release.Namespace }}"
 providerSpecific:
   awsAccountId: ""
   awsClusterRoleIdentityName: ""
