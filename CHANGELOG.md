@@ -7,11 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## Added
+### Added
 
 - Included `teleport-kube-agent` app by default on EKS clusters.
 - Add `security-bundle` app.
-
+- Add `cilium-servicemonitors` app.
 
 ## [0.5.1] - 2024-02-13
 
