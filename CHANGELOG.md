@@ -7,13 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Prefix `baseDomain` with cluster name if its missing for `external-dns` config.
+
 ## [0.7.0] - 2024-04-16
 
 ### Added
 
 - Add `k8s-dns-node-cache` app.
 - Add toleration for `uninitialized` nodes to the kyverno admission controller.
-
 
 ## [0.6.0] - 2024-03-20
 
