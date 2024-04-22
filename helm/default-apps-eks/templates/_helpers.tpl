@@ -53,8 +53,8 @@ Resolve App CR inconcistencies when baseDomain is taken from the catalog or from
 See https://github.com/giantswarm/giantswarm/issues/29733
 */}}
 {{- define "baseDomain" -}}
-{{- if hasPrefix .Values.clusterName .Values.baseDomain -}}
-{{- printf "%s" .Values.baseDomain -}}
+{{- if hasPrefix (printf "%s." .Values.clusterName) .Values.baseDomain -}}
+{{- .Values.baseDomain -}}
 {{- else -}}
 {{- printf "%s.%s" .Values.clusterName .Values.baseDomain -}}
 {{- end -}}
