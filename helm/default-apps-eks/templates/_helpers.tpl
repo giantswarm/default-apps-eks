@@ -47,3 +47,15 @@ config:
     name: {{ .Values.clusterName }}-cluster-values
     namespace: {{ .Release.Namespace }}
 {{- end -}}
+
+{{/*
+Resolve App CR inconcistencies when baseDomain is taken from the catalog or from cluster-values. 
+See https://github.com/giantswarm/giantswarm/issues/29733
+*/}}
+{{- define "baseDomain" -}}
+{{- if hasPrefix (printf "%s." .Values.clusterName) .Values.baseDomain -}}
+{{- .Values.baseDomain -}}
+{{- else -}}
+{{- printf "%s.%s" .Values.clusterName .Values.baseDomain -}}
+{{- end -}}
+{{- end -}}
