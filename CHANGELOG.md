@@ -7,9 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.8.0] - 2024-04-24
+
+### Changed
+
+- Prefix `baseDomain` with cluster name if its missing for `external-dns` config.
+
+## [0.7.0] - 2024-04-16
+
 ### Added
 
 - Add `k8s-dns-node-cache` app.
+- Add toleration for `uninitialized` nodes to the kyverno admission controller.
 
 ## [0.6.0] - 2024-03-20
 
@@ -88,7 +97,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Add `default-apps-eks` files.
 
-[Unreleased]: https://github.com/giantswarm/default-apps-eks/compare/v0.6.0...HEAD
+[Unreleased]: https://github.com/giantswarm/default-apps-eks/compare/v0.8.0...HEAD
+[0.8.0]: https://github.com/giantswarm/default-apps-eks/compare/v0.7.0...v0.8.0
+[0.7.0]: https://github.com/giantswarm/default-apps-eks/compare/v0.6.0...v0.7.0
 [0.6.0]: https://github.com/giantswarm/default-apps-eks/compare/v0.5.1...v0.6.0
 [0.5.1]: https://github.com/giantswarm/default-apps-eks/compare/v0.5.0...v0.5.1
 [0.5.0]: https://github.com/giantswarm/default-apps-eks/compare/v0.4.0...v0.5.0

@@ -1,5 +1,6 @@
 clusterName: ""
 organization: ""
+baseDomain: ""
 
 userConfig:
   certManager:
@@ -42,7 +43,7 @@ userConfig:
           annotations:
             eks.amazonaws.com/role-arn: arn:aws:iam::{{ include "aws-account-id" $ }}:role/{{ .Values.clusterName }}-Route53Manager-Role
         domainFilters:
-          - "{{ .Values.baseDomain }}"
+          - '{{ include "baseDomain" . }}'
         txtOwnerId: giantswarm-io-external-dns
         txtPrefix: "{{ .Values.clusterName }}"
         annotationFilter: giantswarm.io/external-dns=managed
@@ -60,6 +61,20 @@ userConfig:
       values:
         NetExporter:
           NTPServers: 169.254.169.123
+  securityBundle:
+    configMap:
+      values:
+        userConfig:
+          kyverno:
+            configMap:
+              values:
+                kyverno:
+                  admissionController:
+                    tolerations:
+                    - key: "node.cluster.x-k8s.io/uninitialized"
+                      operator: "Exists"
+                      effect: "NoSchedule"
+
 apps:
   capi-node-labeler:
     appName: capi-node-labeler
