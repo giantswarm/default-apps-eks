@@ -10,6 +10,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Update `net-exporter` to 1.19.0.
+- Update `external-dns-app` to 3.1.0.
+- Update `cert-manager-app` to 3.7.5.
+- Update `k8s-dns-node-cache-app` to 2.6.2.
 
 ## [0.8.0] - 2024-04-24
 
