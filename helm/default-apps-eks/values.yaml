@@ -21,6 +21,11 @@ userConfig:
         dns01RecursiveNameserversOnly: true
         ciliumNetworkPolicy:
           enabled: true
+        config:
+          apiVersion: controller.config.cert-manager.io/v1alpha1
+          kind: ControllerConfiguration
+          featureGates:
+            experimentalGatewayAPISupport: true
   cluster-autoscaler:
     configMap:
       values:
