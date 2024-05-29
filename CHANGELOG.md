@@ -7,12 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.8.1] - 2024-05-29
+
 ### Changed
 
 - Update `net-exporter` to 1.19.0.
 - Update `external-dns-app` to 3.1.0.
 - Update `cert-manager-app` to 3.7.5.
 - Update `k8s-dns-node-cache-app` to 2.6.2.
+- Update `teleport-kube-agent-app` to 0.9.0.
 
 ## [0.8.0] - 2024-04-24
 
@@ -104,7 +107,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Add `default-apps-eks` files.
 
-[Unreleased]: https://github.com/giantswarm/default-apps-eks/compare/v0.8.0...HEAD
+[Unreleased]: https://github.com/giantswarm/default-apps-eks/compare/v0.8.1...HEAD
+[0.8.1]: https://github.com/giantswarm/default-apps-eks/compare/v0.8.0...v0.8.1
 [0.8.0]: https://github.com/giantswarm/default-apps-eks/compare/v0.7.0...v0.8.0
 [0.7.0]: https://github.com/giantswarm/default-apps-eks/compare/v0.6.0...v0.7.0
 [0.6.0]: https://github.com/giantswarm/default-apps-eks/compare/v0.5.1...v0.6.0
