@@ -215,7 +215,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/node-exporter-app
-    version: 1.19.0
+    version: 1.20.0
   vpa:
     appName: vertical-pod-autoscaler
     chartName: vertical-pod-autoscaler-app
