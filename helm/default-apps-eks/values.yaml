@@ -153,7 +153,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/cluster-autoscaler-app
-    version: 1.27.3-gs5
+    version: 1.31.3-gs1
   externalDns:
     appName: external-dns
     chartName: external-dns-app
